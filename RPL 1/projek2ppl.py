@@ -24,6 +24,7 @@ def show_menu():
     print("5. Keluar")
 
     menu = int(input("Pilih Menu : > "))
+    print("\n")
 
     if menu == 1:
         show_buku()
