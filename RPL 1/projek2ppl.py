@@ -3,7 +3,11 @@ buku = []
 
 #fungsi show buku ( perlihatkan buku )
 def show_buku():
-
+    if len(buku) <= 0:
+        print ("Buku Kosong mas!")
+    else:
+        for indeks in range(len(buku)):
+            print ("[{}]] {}".format (indeks,buku [indeks]))
 
 #fungsi insert buku
 def insert_buku():
@@ -35,5 +39,6 @@ def show_menu():
         print ("Upss Salaahh")
 
 # tampilkan Menu
-show_menu()
-print (buku)
+if __name__ == "__main__":
+    while True:
+        show_menu()
