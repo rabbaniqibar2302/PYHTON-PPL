@@ -33,7 +33,11 @@ def insert_buku():
 
 #fungsi untuk menampilkan isi buku
 def show_buku():
-    print(buku)
+    if len(buku) <= 0:
+        print ("Belum Ada Data")
+    else:
+        for indeks in range(len(buku)):
+            print ("[{}] {}".format(indeks,buku[indeks]))
 
 if __name__ == "__main__":
     while True:
