@@ -1,22 +1,65 @@
+#fungsi garisnya gays
+def garis1():
+    print ("==========================")
+
+def garis2():
+    print ("--------------------------")
+
 # Perpus kosong untuk menyimpan buku
 buku = []
 
-#fungsi show buku ( perlihatkan buku )
+# fungsi show buku ( perlihatkan buku )
 def show_buku():
     if len(buku) <= 0:
-        print ("Buku Kosong mas!")
+        garis1()
+        print("Buku Kosong mas!")
+        garis1()
     else:
         for indeks in range(len(buku)):
-            print ("[{}]] {}".format (indeks,buku [indeks]))
+            garis1()
+            print("[{}] {}".format(indeks, buku[indeks]))
+            garis1()
 
-#fungsi insert buku
+# fungsi untuk edit buku
+def edit_buku():
+    show_buku()
+    indeks = int(input("Inputkan ID Buku : "))
+    if indeks > len(buku):
+        print("ID SALAH")
+        garis2()
+    else:
+        judul_baru = input("Judul Baru : ")
+        buku[indeks] = judul_baru
+        garis2()
+        print("Buku berhasil dirubah!")
+        show_buku()
+        garis1()
+
+# fungsi insert buku
 def insert_buku():
+    garis1()
     buku_baru = input("Judul Buku : ")
     buku.append(buku_baru)
+    garis2()
+    print("Buku Berhasil ditambah!")
+    garis1()
+
+#fungsi delete buku
+def delete_buku():
+    show_buku()
+    indeks = int(input("Inputkan ID Buku : "))
+    if indeks > len(buku):
+        print ("ID SALAH")
+    else:
+        buku.remove(buku[indeks])
+        garis1()
+        print ("Buku berhasil dihapus!")
+        garis2()
 
 # Menu untuk tampilan perpus
 def show_menu():
-    print("-Selamat datang di Perpus-")
+    print("\n")
+    print("--SELAMAT DATANG DI PERPUS!--")
     print("1. Show buku")
     print("2. Insert buku")
     print("3. Edit buku")
@@ -24,7 +67,6 @@ def show_menu():
     print("5. Keluar")
 
     menu = int(input("Pilih Menu : > "))
-    print("\n")
 
     if menu == 1:
         show_buku()
@@ -37,7 +79,8 @@ def show_menu():
     elif menu == 5:
         exit()
     else:
-        print ("Upss Salaahh")
+        print("Upss Salaahh")
+
 
 # tampilkan Menu
 if __name__ == "__main__":
