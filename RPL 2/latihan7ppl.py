@@ -27,8 +27,19 @@ class mobilefwan(mobil):
     def pamer(self):
         print(f'Mobil{self._merk} dengan total gear {self._total_gear}')
 
-redbull = mobilefwan(' Redbull Racing',8)
-redbull.pamer()
+# redbull = mobilefwan(' Redbull Racing',8)
+# redbull.pamer()
+
+# class si paling sulid di akses (private)
+class motor:
+    def __init__ (self,merk):
+        self.__merk = merk
+
+    def tampilkan_merk(self):
+        print(f'Merk motornya : {self.__merk}')
+
+# ducati = motor('Ducati')
+# ducati.tampilkan_merk()
 
 # sedan = mobil('Toyota')
 
