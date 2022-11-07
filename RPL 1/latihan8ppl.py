@@ -15,5 +15,5 @@ class angka:
 # membuat objek
 x1 = angka(10)
 x2 = angka(20)
-x3 = x1 + x2
+x3 = x1 + x2 
 print(x3.angka)
